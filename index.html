@@ -40,7 +40,7 @@
     </script>
 
 </head>
-<body>
+<body class="relative ">
   <!-- header -->
   <header class=" py-4 shadow-sm bg-white">
 
@@ -51,7 +51,7 @@
     </a>
 
       <!-- searchbar -->
-      <div class="w-full flex max-w-xl relative bg-slate-300">
+      <div class="w-full sm:flex max-w-xl  relative bg-slate-300 hidden ">
           <span class="absolute left-4 top-3 text-lg text-gray-400">
             <i class="fa-solid fa-magnifying-glass"></i>
           </span>
@@ -88,7 +88,7 @@
   <!-- header end -->
 
   <!-- navber -->
-    <nav class="bg-gray-800 ">
+    <nav class="bg-gray-800 relative">
       <div class="container flex items-center ">
         <!-- all category -->
         <div class="px-8 py-4 bg-primary cursor-pointer relative" id="allCetagory" >
@@ -127,7 +127,7 @@
         </div>
           <!-- all nav lisks -->
 
-        <div class="flex items-center justify-between flex-grow pl-12">
+        <div class="sm:flex hidden items-center justify-between flex-grow pl-12 ">
           <div class="flex items-center space-x-6 capitalize">
             <a href="index.html" class="text-gray-200 hover:text-white transition"> home</a>
             <a href="shop.html" class="text-gray-200 hover:text-white transition"> shop</a>
@@ -136,20 +136,41 @@
           </div>
           <a href="#" class="text-gray-200 hover:text-white transition">login/register</a>
         </div>
+
+        <!-- hamberger icon -->
+        <span class="text-white text-2xl absolute right-4 sm:hidden" id="menu">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+        <!-- hamberger icon  end-->
+
+          <!-- all links for mobile version -->
+          <div class="flex absolute right-5 sm:hidden   mt-72 items-center justify-between flex-grow pl-12 z-10" >
+            <div class="flex  px-5 py-4  bg-gray-800 flex-col items-center space-y-6 capitalize" id="menuItem">
+              <a href="index.html" class="text-gray-200 hover:text-white transition"> home</a>
+              <a href="shop.html" class="text-gray-200 hover:text-white transition"> shop</a>
+              <a href="#" class="text-gray-200 hover:text-white transition"> about us</a>
+              <a href="#" class="text-gray-200 hover:text-white transition"> contact us</a>
+              <a href="#" class="text-gray-200 hover:text-white transition">login/register</a>
+            </div>
+            
+          </div>
+           <!-- all links for mobile version end--> 
+
+
     </nav>
   <!-- navber end -->
 
   <!-- banner -->
-   <div class="bg-cover bg-no-repeat bg-center py-36 bg-[url('img/banner-bg.jpg')]">
+   <div class="bg-cover bg-no-repeat md:bg-center bg-left py-36 bg-[url('img/banner-bg.jpg')]">
       <div class="container">
-          <h1 class="text-6xl text-gray-800 font-medium mb-4 capitalize">
+          <h1 class="md:text-6xl text-4xl text-gray-800 font-medium mb-4 capitalize">
               best collection for <br> home decoration
           </h1>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, <br>
             laborum? Eius necessitatibus voluptates soluta doloribus nam possimus odio iure praesentium!
           </p>
-          <div class="mt-12">
+          <div class="sm:mt-12 mt-8">
             <a href="#" class="bg-primary border border-primary text-white px-8 py-3 font-medium rounded-md hover:bg-transparent hover:text-white transition"> Shop now</a>
           </div>
       </div>
@@ -158,7 +179,7 @@
 
    <!-- deature sention -->
  <div class="container py-16  flex justify-center ">
-      <div class="w-10/12 flex items-center justify-between">
+      <div class="w-10/12 flex flex-col sm:flex-row space-y-5 sm:space-y-0  items-center justify-between">
            <div class="border border-primary px-12 py-8 flex items-center gap-4 rounded-md ">
                 <img src="img/icons/delivery-van.svg" alt="" class="w-12 h-12 object-contain">
                 <div class="mb-1">
@@ -188,7 +209,7 @@
     <div class="container py-16 ">
        <h1 class="text-3xl font-medium uppercase mb-3 text-gray-800">SHOP BY CATEGORY</h1>
 
-       <div class="grid grid-cols-3 gap-3">
+       <div class="grid md:grid-cols-3 grid-cols-1 gap-3">
                 <!-- single category -->
              <div class="relative rounded-sm overflow-hidden">
                   <img src="img/category/category-1.jpg" class="w-full" alt="">
@@ -230,7 +251,7 @@
     <h1 class="text-3xl font-medium uppercase mb-3 text-gray-800">TOP NEW ARRIVAL </h1>
    
      <!-- product grid -->
-     <div class="grid grid-cols-4 gap-6">
+     <div class="grid md:grid-cols-4 grid-cols-1 gap-6">
        <!-- single product start -->
         <div class="bg-white shadow rounded overflow-hidden"> 
            <!-- product img -->
@@ -407,7 +428,7 @@
           <h1 class="text-3xl font-medium uppercase mb-3 text-gray-800">RECOMENDED FOR YOU </h1>
         
           <!-- product grid -->
-          <div class="grid grid-cols-4 gap-6">
+          <div class="grid md:grid-cols-4 grid-cols-1 gap-6">
             <!-- single product start -->
               <div class="bg-white shadow rounded overflow-hidden"> 
                 <!-- product img -->
@@ -729,10 +750,10 @@
 
 
           <!-- footer -->
-           <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
-             <div class="container grid grid-cols-3 gap-4">
+           <footer class="bg-white pt-16 pb-12 border-t border-gray-100 ">
+             <div class="container grid sm:grid-cols-3  gap-4">
                 <!-- footer text -->
-                 <div class="col-span-1 space-y-8">
+                 <div class="col-span-1 space-y-8 ">
                       <img src="img/logo.svg" class="w-32"> 
                       <p class="text-gray-500">
                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, nobis!
@@ -754,7 +775,7 @@
                  </div>
                 <!-- footer text end -->
                 <!-- footer links -->
-                   <div class="col-span-2 grid grid-cols-2 gap-8">
+                   <div class="col-span-2 grid sm:grid-cols-2 sm:text-left text-center gap-8">
                         <div class="grid grid-cols-2 gap-8">
                            <div>
                               <h3 class="text-md font-semibold text-gray-700 uppercase tracking-wider">Solutions</h3>
@@ -837,7 +858,7 @@
 
           <!-- copyright -->
            <div class="bg-gray-800 py-4">
-                <div class="container flex items-center justify-between">
+                <div class="container flex items-center sm:flex-row flex-col space-y-2 sm:space-y-0  justify-between">
                     <a href="https://www.facebook.com/sabbirahamed.siam.710"><p class="text-white"> Designed by Sabbir Ahamed Siam</p></a>
                     <img src="img/methods.png" class="h-5">
                 </div>
